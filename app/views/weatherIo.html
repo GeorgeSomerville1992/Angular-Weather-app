@@ -1,0 +1,49 @@
+<div class="outerContainer" ng-controller="WeatherIoCtrl">
+	<div class="jumbotron main-background">
+	  <h3 id="headerSummary">WeatherIo App</h3>
+	</div>
+	<div class="row marketin">
+		<h1>
+		<div class="col-md-6">
+			<!-- user form -->
+			<form name="reviewform" class="weather-postcode-form" ng-submit="submitRequest(location)"> 
+				<div class="form-group">
+    			<label class="form-input"for="postcode">Postcode</label>
+	      	<input class="form-input"type="text" ng-model="postCode"></input>
+	      	<hr>
+	    		<input type="submit" value="Submit Postcode" class="btn btn-default"></input>
+	    		<input type="submit" value="Submit Current Location" class="btn btn-default" ng-click="getLocation()"></input>
+	      </div>	
+				<!-- <input type="text" ng-model="city" placeholder="chooseCity" id="geocodeCity"></input> -->
+	    </form>
+		</div>
+		<div class="col-md-6">
+			<!-- user results-->
+				<!-- <div id="map-canvas"style="width: 400px; height: 300px">
+			</div> -->
+		</div>
+	</div>
+	<div ng-repeat="weather in currentWeather">
+		<div class="col-md-12 weather-Panel" style="background-image:url(../images/{{weather.icon}}.gif)">
+			<div class="container">
+				<div class="avg-Temp">
+					<p>{{weather.temperatureMax}} F </p>
+				</div>
+					<h4>{{weather.weekday}} </h4>
+				<div class="summary-Container">
+
+				<div class="summary-Small">
+					<h4> {{weather.summary}}</h4>
+					<p> Cloud Cover {{weather.cloudCover}} % <p>
+					<p> Wind Speed {{weather.windSpeed}} MPH </p>
+				</div>	
+				</div>
+<!-- 				<p> Wind Bearing {{weather.windBearing}}</p> -->
+
+
+				<p> humidity{{weather.humidity}}</p>
+			</div>
+		<!-- weather stuff goes here -->
+		</div>
+	</div>
+</div><!-- weatherIoCtrl -->

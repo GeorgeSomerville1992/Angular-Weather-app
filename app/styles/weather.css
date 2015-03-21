@@ -1,0 +1,52 @@
+.weather-Panel{
+	height: 200px;
+	width: 100%;
+	background-repeat:no-repeat;
+	background-size: 100%;
+	color:white;
+	border:1px solid silver;
+	border-radius: 5px;
+	margin-bottom:20px;
+
+}
+
+.summary-Container{
+	width:100px;
+	height:100px;
+	position: relative;
+	text-align: right;
+	display:inline;
+	position: relative;
+	left:-50px;
+
+}
+.form-input{
+	display:inline;
+}
+/*.summary-Small{
+	float:left;
+	display:block;
+}*/
+.avg-Temp p{
+	font-size:50px;
+}
+#headerSummary{
+	color:#F5F5F5;
+}
+.jumbotron{
+
+}
+.main-background{
+	background-image: url(../images/homepage.jpg);
+	background-repeat:no-repeat;
+	background-size: 100%;
+}
+
+.weather-postcode-form{
+	font-size: 24px;
+	font-weight:lighter;
+}
+.weather-postcode-form input{
+	width:100%;
+	margin-top:10px;
+}
